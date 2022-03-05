@@ -13,8 +13,8 @@ LDD_VERSION = '97a2a1e5678b08e97e81deb1e96a11c271c4e1a3'
 LDD_SITE = 'git@github.com:cu-ecen-aeld/assignment-7-kamini2801.git'
 LDD_SITE_METHOD = git
 LDD_GIT_SUBMODULES = YES
-LDD_MODULES_SUBDIR = misc-modules/
-LDD_MODULES_SUBDIR += scull/
+LDD_MODULE_SUBDIRS = misc-modules/
+LDD_MODULE_SUBDIRS += scull/
 
 #LDD_OVERRIDE_SRCDIR = /home/kamini/AESD/assignment-7-kamini2801
 
@@ -26,12 +26,12 @@ LDD_MODULES_SUBDIR += scull/
 # TODO add your writer, finder and finder-test utilities/scripts to the installation steps below
 define LDD_INSTALL_TARGET_CMDS
 		
-	$(INSTALL) -m 0755 $(@D)/scull $(TARGET_DIR)/usr/bin
-	#$(INSTALL) -m 0755 $(@D)/scull/scull_unload $(TARGET_DIR)/usr/bin
+	$(INSTALL) -m 0755 $(@D)/scull/scull_load $(TARGET_DIR)/usr/bin
+	$(INSTALL) -m 0755 $(@D)/scull/scull_unload $(TARGET_DIR)/usr/bin
 	
 
-	$(INSTALL) -m 0755 $(@D)/misc-modules $(TARGET_DIR)/usr/bin
-	#$(INSTALL) -m 0755 $(@D)/misc-modules/module_unload $(TARGET_DIR)/usr/bin
+	$(INSTALL) -m 0755 $(@D)/misc-modules/module_load $(TARGET_DIR)/usr/bin
+	$(INSTALL) -m 0755 $(@D)/misc-modules/module_unload $(TARGET_DIR)/usr/bin
 	
 	
 endef
