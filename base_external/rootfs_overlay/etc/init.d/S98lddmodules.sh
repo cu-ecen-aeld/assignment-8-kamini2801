@@ -3,9 +3,9 @@
 case "$1" in 
 	start) 
 		echo "Loading custom module"
-        /usr/bin/scull_load
         /usr/bin/module_load faulty
-		modprobe hello
+		/usr/bin/scull_load
+        modprobe hello
 		;; 
 	stop) 
 		echo "Unloading custom module" 
