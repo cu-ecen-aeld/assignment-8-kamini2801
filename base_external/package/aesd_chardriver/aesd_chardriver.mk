@@ -6,14 +6,14 @@
 ##############################################################
 
 
-AESD_CHARDRIVER_VERSION = '1f5651dc2278bb5fc820128f47bfc9822347630d'
+AESD_CHARDRIVER_VERSION = 'ed1d153723a14ca5334202c30ed5cf1222f6ad02'
 # Note: Be sure to reference the *ssh* repository URL here (not https) to work properly
 # with ssh keys and the automated build/test system.
 # Your site should start with git@github.com:
 AESD_CHARDRIVER_SITE = 'git@github.com:cu-ecen-aeld/assignments-3-and-later-kamini2801.git'
 AESD_CHARDRIVER_SITE_METHOD = git
 AESD_CHARDRIVER_GIT_SUBMODULES = YES
-AESD_CHARDRIVER_OVERRIDE_SRCDIR = /home/kamini/AESD/assignments-3-and-later-kamini2801
+# AESD_CHARDRIVER_OVERRIDE_SRCDIR = /home/kamini/AESD/assignments-3-and-later-kamini2801
 
 AESD_CHARDRIVER_MODULE_SUBDIRS += aesd-char-driver/
 
